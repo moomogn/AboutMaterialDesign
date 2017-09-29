@@ -15,6 +15,28 @@
         android:padding="@dimen/dimen_common_margin"
         android:orientation="vertical">
 
+        <!--app:tabMaxWidth=""          最大宽度-->
+        <!--app:tabMinWidth=""          最小宽度-->
+
+        <!--app:tabPaddingStart=""      内边距-->
+        <!--app:tabPaddingBottom=""-->
+        <!--app:tabPaddingEnd=""-->
+        <!--app:tabPaddingTop=""-->
+
+        <!--app:tabPadding=""-->
+
+
+        <!--app:tabIndicatorColor=""    指示器颜色-->
+        <!--app:tabIndicatorHeight=""   指示器高度-->
+        <!--app:tabTextColor=""         Tab 颜色-->
+        <!--app:tabSelectedTextColor="" Tab 颜色-->
+        <!--app:tabTextAppearance=""-->
+        <!---->
+        <!--app:tabMode=""              Tab 模式 //Tablayout.MODE_FIXED 不可滑动
+                                                //TabLayout.MODE_SCROLLABLE 可滑动-->
+        <!--app:tabGravity=""           Tab 对齐 //TabLayout.GRAVITY_FILL 填充
+                                                //TabLayout.GRAVITY_CENTER 居中-->
+
         <android.support.design.widget.TabLayout
             android:id="@+id/activity_tablayout"
             android:background="@drawable/shape_card"

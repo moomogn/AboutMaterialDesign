@@ -71,11 +71,6 @@ public class TabLayoutActivity extends AppCompatActivity {
          Tablayout.getTabCount()             获取Tab总数
          */
 
-
-//        tablayout.addTab(tablayout.newTab().setText("tab_A"));
-//        tablayout.addTab(tablayout.newTab().setText("tab_B"));
-//        tablayout.addTab(tablayout.newTab().setText("tab_C"));
-
         tablayout.setSelectedTabIndicatorColor(
                 getResources().getColor(R.color.colorPrimary));   //指示器颜色 - app:tabIndicatorColor=""
         tablayout.setSelectedTabIndicatorHeight(10);              //指示器高度 - app:tabIndicatorHeight=""
@@ -83,25 +78,7 @@ public class TabLayoutActivity extends AppCompatActivity {
                 getResources().getColor(R.color.colorAccent));    //          - app:tabSelectedTextColor=""
                                                                   //          - app:tabTextAppearance=""      为Tab文本设置样式
         tablayout.setTabMode(TabLayout.MODE_FIXED);               //Tab 模式   - app:tabMode=""
-        //Tablayout.MODE_FIXED 不可滑动
-        //TabLayout.MODE_SCROLLABLE 可滑动
         tablayout.setTabGravity(TabLayout.GRAVITY_FILL);          //Tab 对齐   - app:tabGravity=""
-        // TabLayout.GRAVITY_FILL 填充
-        //TabLayout.GRAVITY_CENTER 居中
-//        tablayout.setBackgroundColor(Color.WHITE);                  //背景颜色   - app:tabBackground=""
-
-        //其他属性
-        /**
-         app:tabMaxWidth=""          最大宽度
-         app:tabMinWidth=""          最小宽度
-
-         app:tabPaddingStart=""      ab内边距
-         app:tabPaddingBottom=""
-         app:tabPaddingEnd=""
-         app:tabPaddingTop=""
-
-         app:tabPadding=""
-         */
 
     }
 
