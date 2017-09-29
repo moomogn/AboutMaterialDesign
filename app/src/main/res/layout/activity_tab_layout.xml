@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_common_margin"
+    android:paddingBottom="@dimen/dimen_common_margin"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.arno.aboutmaterialdesign.tablayout.TabLayoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/dimen_common_margin"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/activity_tablayout"
+            android:background="@drawable/shape_card"
+            android:layout_marginLeft="@dimen/dimen_common_margin"
+            android:layout_marginRight="@dimen/dimen_common_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_tablayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</FrameLayout>

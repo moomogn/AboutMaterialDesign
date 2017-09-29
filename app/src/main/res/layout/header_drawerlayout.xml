@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_nav_header"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/header_main_drawer_person_iv"
+        android:layout_width="@dimen/dimen_drawer_header_titlepic_radio"
+        android:layout_height="@dimen/dimen_drawer_header_titlepic_radio"
+        android:src="@drawable/ic_person_default"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/header_main_drawer_discrip_tv"
+        android:layout_below="@id/header_main_drawer_person_iv"
+        android:layout_alignLeft="@id/header_main_drawer_person_iv"
+        android:layout_marginTop="@dimen/dimen_common_margin"
+        android:layout_width="@dimen/dimen_drawer_header_titlepic_radio"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/drawer_head_text"/>
+
+</RelativeLayout>

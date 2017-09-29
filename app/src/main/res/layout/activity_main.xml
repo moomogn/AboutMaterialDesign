@@ -1,18 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/dimen_common_margin"
     tools:context="com.arno.aboutmaterialdesign.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_common_margin">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/text_btn_material_design"
+            />
+        <Button
+            android:id="@+id/activity_main_btn_TabLayout"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_tablayout"
+            />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/activity_main_btn_DrawableLayout"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_drawerLayout"
+            />
+
+        <Button
+            android:id="@+id/activity_main_btn_TextInputLayout"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_textInputLayout"
+            />
+
+        <Button
+            android:id="@+id/activity_main_btn_FloatingActionButton"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_floatingActionButton"
+            />
+
+        <Button
+            android:id="@+id/activity_main_btn_Snackbar"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_snackbar"
+            />
+
+        <Button
+            android:id="@+id/activity_main_btn_Toolbar"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_toolbar"
+            />
+
+        <Button
+            android:id="@+id/activity_main_btn_CoordinatorLayout"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_coordinatorLayout"
+            />
+
+        <Button
+            android:id="@+id/activity_main_btn_CollapsingToolbarLayout"
+            style="@style/commmon_button_style"
+            android:text="@string/text_btn_collapsingtoolbarlayout"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
