@@ -1,5 +1,8 @@
 package com.arno.aboutmaterialdesign.tablayout;
 
+import android.animation.ArgbEvaluator;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.arno.aboutmaterialdesign.R;
 
@@ -16,13 +20,21 @@ import java.util.List;
 
 public class TabLayoutActivity extends AppCompatActivity {
     private static final String TAG = "Arno";
+    public static final String KEY_ARGB_FLAG = "key_argb_flag";
+    private boolean mArgbFlag;
 
     private TabLayout tablayout;
     private ViewPager viewpager;
 
     private List<Fragment> fragments;
     private List<String> titles;
+    private View mContainer;
 
+    public static void launch(Context context,boolean argbFlag){
+        Intent argbIntent = new Intent(context, TabLayoutActivity.class);
+        argbIntent.putExtra(KEY_ARGB_FLAG,argbFlag);
+        context.startActivity(argbIntent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +42,8 @@ public class TabLayoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tab_layout);
 
         initData();
+
+        initContainer();
 
         initTablayout();
 
@@ -45,6 +59,12 @@ public class TabLayoutActivity extends AppCompatActivity {
             fragments.add(BlankFragment.newInstance(title));
             titles.add(title);
         }
+
+        mArgbFlag = getIntent().getBooleanExtra(KEY_ARGB_FLAG,false);
+    }
+
+    private void initContainer() {
+        mContainer = findViewById(R.id.activity_tablayout_container);
     }
 
     /**
@@ -102,6 +122,10 @@ public class TabLayoutActivity extends AppCompatActivity {
             }
         });
 
+        if (mArgbFlag) {
+            viewpager.addOnPageChangeListener(new PagerChangeListener());
+        }
+
         tablayout.setupWithViewPager(viewpager);
     }
 
@@ -109,6 +133,33 @@ public class TabLayoutActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume: " + getClass().getSimpleName().toString());
+    }
+
+    private class PagerChangeListener implements ViewPager.OnPageChangeListener{
+        private int[] colors = {Color.parseColor("#e16428"),Color.parseColor("#ffbc2c"),
+                Color.parseColor("#86b86b"),Color.parseColor("#878ecd"),Color.parseColor("#9a9b94"),};
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            if (positionOffset == 0) {
+                return;
+            }
+
+            //得到 颜色 估值器
+            ArgbEvaluator evaluator = new ArgbEvaluator();
+            //根据positionOffset得到渐变色
+            int evaluate = (int) evaluator.evaluate(positionOffset,colors[position],colors[position+1]);
+            mContainer.setBackgroundColor(evaluate);
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
     }
 
 }

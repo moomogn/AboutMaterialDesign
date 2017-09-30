@@ -1,5 +1,7 @@
 package com.arno.aboutmaterialdesign.drawerlayout;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -20,6 +22,10 @@ public class DrawerLayoutActivity extends AppCompatActivity {
     private boolean visibleFlag = true;
     private Button mBtn;
     private DrawerLayout mDrawerLayout;
+
+    public static void launch(Context context){
+        context.startActivity(new Intent(context, DrawerLayoutActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

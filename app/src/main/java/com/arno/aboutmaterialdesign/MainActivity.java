@@ -1,6 +1,5 @@
 package com.arno.aboutmaterialdesign;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -27,10 +26,13 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onClick: ");
         switch (view.getId()) {
             case R.id.activity_main_btn_TabLayout:
-                startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
+                TabLayoutActivity.launch(MainActivity.this,false);
                 break;
             case R.id.activity_main_btn_DrawableLayout:
-                startActivity(new Intent(MainActivity.this, DrawerLayoutActivity.class));
+                DrawerLayoutActivity.launch(MainActivity.this);
+                break;
+            case R.id.activity_main_btn_ArgbEvaluator:
+                TabLayoutActivity.launch(MainActivity.this,true);
                 break;
             case R.id.activity_main_btn_TextInputLayout:
                 break;

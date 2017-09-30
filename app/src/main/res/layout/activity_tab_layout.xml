@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:paddingTop="@dimen/dimen_common_margin"
     android:paddingBottom="@dimen/dimen_common_margin"
-    android:background="@color/colorPrimaryDark"
+    android:id="@+id/activity_tablayout_container"
+    android:background="@color/colorAccent"
     tools:context="com.arno.aboutmaterialdesign.tablayout.TabLayoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent"
         android:padding="@dimen/dimen_common_margin"
         android:orientation="vertical">
 
