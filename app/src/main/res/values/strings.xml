@@ -12,4 +12,7 @@
     <string name="text_btn_toolbar">Toolbar</string>
     <string name="text_btn_coordinatorLayout">CoordinatorLayout</string>
     <string name="text_btn_collapsingtoolbarlayout">CollapsingToolbarLayout</string>
+    <string name="text_input_container_title">_WelCome</string>
+    <string name="hint_text_input_account">account</string>
+    <string name="hint_text_input_password">password</string>
 </resources>

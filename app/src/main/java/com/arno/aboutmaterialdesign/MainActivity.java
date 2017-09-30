@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.arno.aboutmaterialdesign.drawerlayout.DrawerLayoutActivity;
 import com.arno.aboutmaterialdesign.tablayout.TabLayoutActivity;
+import com.arno.aboutmaterialdesign.textinput.TextInputActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Arno";
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 TabLayoutActivity.launch(MainActivity.this,true);
                 break;
             case R.id.activity_main_btn_TextInputLayout:
+                TextInputActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_FloatingActionButton:
                 break;

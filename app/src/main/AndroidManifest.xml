@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".tablayout.TabLayoutActivity" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity"/>
+        <activity android:name=".textinput.TextInputActivity"></activity>
     </application>
 
 </manifest>
