@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 
 import com.arno.aboutmaterialdesign.drawerlayout.DrawerLayoutActivity;
+import com.arno.aboutmaterialdesign.floating.FloatingActionButtonActivity;
+import com.arno.aboutmaterialdesign.snackbar.SnackbarActivity;
 import com.arno.aboutmaterialdesign.tablayout.TabLayoutActivity;
 import com.arno.aboutmaterialdesign.textinput.TextInputActivity;
 
@@ -39,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 TextInputActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_FloatingActionButton:
+                FloatingActionButtonActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_Snackbar:
+                SnackbarActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_Toolbar:
                 break;

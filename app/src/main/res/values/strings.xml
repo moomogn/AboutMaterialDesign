@@ -15,4 +15,24 @@
     <string name="text_input_container_title">_WelCome</string>
     <string name="hint_text_input_account">account</string>
     <string name="hint_text_input_password">password</string>
+    <string name="text_floating_textview_content">本文由作者根据其在KCon 2016黑客大会上的演讲内容整理而成。演讲稿链接：Binder fuzzing based on drozer。
+
+文章开始，先来看几个我在工作生活中发现的Android漏洞。其中包括Android系统锁屏密码绕过（影响了所有安全补丁在2016年10月份以前的Android 6.0、6.0.1、7.0系统）、三星手机关机窃听、三星手机越权修改主题、系统拒绝服务漏洞。然后我们再来解释相关的技术知识和实践。
+
+Android漏洞案例
+Android系统锁屏密码绕过
+先来看下漏洞视频演示：
+https://v.qq.com/x/page/u0543o9s9fk.html
+
+这个漏洞当时影响 6.0、6.0.1、7.0的所有最新Android系统。运行exp（exp可以是一个没有申请任何权限的APK，也可以是一个二进制的bin文件），就可以清除Android系统的锁屏密码，这里的密码包括指纹密码、手势密码、pin码和password类的所有密码类型，然后就可以成功重置密码。
+
+该漏洞前后有两个CVE（Common Vulnerabilities and Exposures，国际通用的漏洞编号）编号：CVE-2016-3749和CVE-2016-3908。
+
+我在2016年5月份提交给Google，6月1号收到回复：Google内部安全研究员，在4月13号已经发现了该漏洞，漏洞状态置为duplicate。
+
+
+继续深入分析发现：使用另一个Android 6.0.1分支版本进行测试，发现另一个函数也存在安全漏洞，这个漏洞函数对应的数字和之前的漏洞相同，Android系统漏洞众多的一个很大原因就是碎片化问题。发现这个问题之后，出于一些考虑，并没有马上提交给Google，等Google发布漏洞patch。
+
+Google于7月份发布了该漏洞公告，CVE编号CVE-2016-3749，而patch代码只是修复了我第一次提交的漏洞位置setLockPassword()和setLockPattern()。</string>
+
 </resources>

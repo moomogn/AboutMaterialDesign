@@ -16,8 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".tablayout.TabLayoutActivity" />
-        <activity android:name=".drawerlayout.DrawerLayoutActivity"/>
-        <activity android:name=".textinput.TextInputActivity"></activity>
+        <activity android:name=".drawerlayout.DrawerLayoutActivity" />
+        <activity android:name=".textinput.TextInputActivity" />
+        <activity android:name=".floating.FloatingActionButtonActivity" />
+        <activity android:name=".snackbar.SnackbarActivity"></activity>
     </application>
 
 </manifest>
