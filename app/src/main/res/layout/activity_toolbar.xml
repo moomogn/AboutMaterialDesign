@@ -50,11 +50,6 @@
                 style="@style/commmon_button_style"
                 android:text="测试2"/>
 
-            <Button
-                android:id="@+id/activity_toolbar_btn"
-                style="@style/commmon_button_style"
-                android:text="测试"/>
-
         </LinearLayout>
 
     </FrameLayout>

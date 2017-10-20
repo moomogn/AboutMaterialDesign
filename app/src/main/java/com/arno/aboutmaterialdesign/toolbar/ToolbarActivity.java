@@ -98,6 +98,7 @@ public class ToolbarActivity extends AppCompatActivity {
                 ToolbarTestActivity1.launch(ToolbarActivity.this);
                 break;
             case R.id.activity_toolbar_btn2:
+                ToolbarTestActivity2.launch(ToolbarActivity.this);
                 break;
             default:
                 break;

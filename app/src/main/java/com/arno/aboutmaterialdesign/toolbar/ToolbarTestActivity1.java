@@ -10,18 +10,20 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.arno.aboutmaterialdesign.R;
-
-import static android.widget.Toast.makeText;
 
 public class ToolbarTestActivity1 extends AppCompatActivity {
 
     private static final String TAG = "Arno";
 
+    private static final int[] res = {R.drawable.ic_bike,R.drawable.ic_bus,R.drawable.ic_taxi,R.drawable.ic_train,R.drawable.ic_plane,};
+
     private Toolbar mToolbar;
     private ActionMenuView mActionMenuView;
+    private ImageView mImageView;
 
     public static void launch(Context context){
         context.startActivity(new Intent(context,ToolbarTestActivity1.class));
@@ -40,22 +42,27 @@ public class ToolbarTestActivity1 extends AppCompatActivity {
                     case R.id.menu_action_item1:
                         Log.i(TAG, "onMenuItemClick: item1");
                         Toast.makeText(ToolbarTestActivity1.this, "item1", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[0]);
                         break;
                     case R.id.menu_action_item2:
                         Log.i(TAG, "onMenuItemClick: item2");
                         Toast.makeText(ToolbarTestActivity1.this, "item2", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[1]);
                         break;
                     case R.id.menu_action_item3:
                         Log.i(TAG, "onMenuItemClick: item3");
                         Toast.makeText(ToolbarTestActivity1.this, "item3", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[2]);
                         break;
                     case R.id.menu_action_item4:
                         Log.i(TAG, "onMenuItemClick: item4");
                         Toast.makeText(ToolbarTestActivity1.this, "item4", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[3]);
                         break;
                     case R.id.menu_action_item5:
                         Log.i(TAG, "onMenuItemClick: item5");
                         Toast.makeText(ToolbarTestActivity1.this, "item5", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[4]);
                         break;
                 }
                 return false;
@@ -66,17 +73,22 @@ public class ToolbarTestActivity1 extends AppCompatActivity {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeText(ToolbarTestActivity1.this, "NavigationIcon Click", Toast.LENGTH_SHORT).show();
+                ToolbarTestActivity1.this.finish();
             }
         });
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);//不显示title
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);//不显示title
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(false);//不显示NavigationIcon
-        getSupportActionBar().setDisplayShowHomeEnabled(false);//不显示logo
+//        getSupportActionBar().setDisplayShowHomeEnabled(false);//不显示logo
 
+        mImageView = ((ImageView) findViewById(R.id.activity_test1_toolbar_img));
 
-        /*// actionMenu 如果使用这个方式，则不能调用 setSupportActionBar
+//        setupMenuFun2();
+    }
+
+    private void setupMenuFun2() {
+        // actionMenu 如果使用这个方式，则不能调用 setSupportActionBar
         mToolbar.inflateMenu(R.menu.menu_action2);
         mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -85,32 +97,38 @@ public class ToolbarTestActivity1 extends AppCompatActivity {
                     case R.id.menu_action_item1:
                         Log.i(TAG, "onMenuItemClick: item1");
                         Toast.makeText(ToolbarTestActivity1.this, "item1", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[0]);
                         break;
                     case R.id.menu_action_item2:
                         Log.i(TAG, "onMenuItemClick: item2");
                         Toast.makeText(ToolbarTestActivity1.this, "item2", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[1]);
                         break;
                     case R.id.menu_action_item3:
                         Log.i(TAG, "onMenuItemClick: item3");
                         Toast.makeText(ToolbarTestActivity1.this, "item3", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[2]);
                         break;
                     case R.id.menu_action_item4:
                         Log.i(TAG, "onMenuItemClick: item4");
                         Toast.makeText(ToolbarTestActivity1.this, "item4", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[3]);
                         break;
                     case R.id.menu_action_item5:
                         Log.i(TAG, "onMenuItemClick: item5");
                         Toast.makeText(ToolbarTestActivity1.this, "item5", Toast.LENGTH_SHORT).show();
+                        mImageView.setImageResource(res[4]);
                         break;
                 }
                 return false;
             }
-        });*/
+        });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        mToolbar.setTitle(null);
     }
 
     @Override

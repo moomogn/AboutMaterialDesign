@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
     tools:context="com.arno.aboutmaterialdesign.toolbar.ToolbarTestActivity1">
 
     <android.support.v7.widget.Toolbar
@@ -13,6 +14,7 @@
         android:id="@+id/activity_test1_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        app:title=""
         app:navigationIcon="@drawable/ic_back_light"
         app:popupTheme="@style/CustomPopupTheme"
         >
@@ -22,5 +24,68 @@
             android:layout_height="wrap_content"
             android:gravity="center"></android.support.v7.widget.ActionMenuView>
     </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dimen_common_margin"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_test1_toolbar_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bike"
+            android:layout_marginRight="@dimen/dimen_common_margin"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exchange"
+            android:layout_marginRight="@dimen/dimen_common_margin"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dimen_common_margin"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="出发地"
+                android:textColorHint="@android:color/white"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="目的地"
+                android:textColorHint="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn_white"
+                android:textColor="@android:color/white"
+                android:padding="5dp"
+                android:text="搜索"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

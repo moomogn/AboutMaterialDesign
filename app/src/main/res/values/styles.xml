@@ -8,11 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
 
 
-        <!--<item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>-->
+        <item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>
 
         <!-- ActionMenu 图标颜色-->
         <!--<item name="android:actionMenuTextColor">#ffffff</item>-->
-        <!--<item name="android:textColorSecondary">@android:color/white</item>-->
+        <item name="android:textColorSecondary">@android:color/white</item>
         <!--<item name="android:colorControlNormal">@android:color/white</item>-->
 
     </style>
@@ -41,9 +41,9 @@
 
     <!-- Toolbar ActionButton 样式 -->
     <style name="CustomActionButtonStyle" parent="@android:style/Widget.Holo.ActionBar">
-        <item name="android:minWidth">56dp</item><!-- 默认值 -->
+        <item name="android:minWidth">72dp</item><!-- 默认值 -->
         <item name="android:padding">0dp</item>
-        <!--<item name="android:background">@drawable/selector_bg_toolbar_action_btn</item>-->
+        <item name="android:background">@drawable/selector_bg_toolbar_action_btn</item>
         <!--<item name="android:backgroundStacked">@drawable/selector_bg_toolbar_action_btn</item>-->
         <!--<item name="android:backgroundSplit">@drawable/selector_bg_toolbar_action_btn</item>-->
         <!--<item name="selectableItemBackground">@drawable/selector_bg_toolbar_action_btn</item>-->

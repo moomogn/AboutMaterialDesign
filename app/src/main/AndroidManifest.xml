@@ -22,7 +22,8 @@
         <activity android:name=".snackbar.SnackbarActivity" />
         <activity android:name=".coordinator.CoordinatorActivity" />
         <activity android:name=".toolbar.ToolbarActivity" />
-        <activity android:name=".toolbar.ToolbarTestActivity1"></activity>
+        <activity android:name=".toolbar.ToolbarTestActivity1" />
+        <activity android:name=".toolbar.ToolbarTestActivity2"></activity>
     </application>
 
 </manifest>
