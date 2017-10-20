@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="自行车"
+        android:id="@+id/menu_action_item1"
+        android:icon="@drawable/ic_bike"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+    <item
+        android:title="公交车"
+        android:id="@+id/menu_action_item2"
+        android:icon="@drawable/ic_bus"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <item
+        android:title="出租车"
+        android:id="@+id/menu_action_item3"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_taxi"
+        app:showAsAction="always" />
+
+    <item
+        android:title="火车"
+        android:id="@+id/menu_action_item4"
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_train"
+        app:showAsAction="always" />
+
+    <item
+        android:title="飞机"
+        android:id="@+id/menu_action_item5"
+        android:orderInCategory="5"
+        android:icon="@drawable/ic_plane"
+        app:showAsAction="always" />
+
+</menu>

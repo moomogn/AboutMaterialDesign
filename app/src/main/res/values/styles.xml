@@ -6,6 +6,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+        <!--<item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>-->
+
+        <!-- ActionMenu 图标颜色-->
+        <!--<item name="android:actionMenuTextColor">#ffffff</item>-->
+        <!--<item name="android:textColorSecondary">@android:color/white</item>-->
+        <!--<item name="android:colorControlNormal">@android:color/white</item>-->
+
     </style>
 
     <style name="commmon_button_style">
@@ -19,6 +28,25 @@
 
     <style name="main_nav_menu_item_text_appearance">
         <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Toolbar ActionMenu 样式 -->
+    <style name="CustomPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <!--overlapAnchor 是让 ActionMenu 不要盖住ToolBar-->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!-- Toolbar ActionButton 样式 -->
+    <style name="CustomActionButtonStyle" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:minWidth">56dp</item><!-- 默认值 -->
+        <item name="android:padding">0dp</item>
+        <!--<item name="android:background">@drawable/selector_bg_toolbar_action_btn</item>-->
+        <!--<item name="android:backgroundStacked">@drawable/selector_bg_toolbar_action_btn</item>-->
+        <!--<item name="android:backgroundSplit">@drawable/selector_bg_toolbar_action_btn</item>-->
+        <!--<item name="selectableItemBackground">@drawable/selector_bg_toolbar_action_btn</item>-->
     </style>
 
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--说明
+        1.orderInCategory 表示显示的次序
+        2.showAsAction: never ifroom always
+            never   总是在 pop 菜单中显示
+            ifroom  如果有空间则在 actionbar 上显示，否则在 pop 菜单中显示
+            always  总是在 actionbar 上显示
+        -->
+    <item
+        android:title="收藏"
+        android:id="@+id/menu_action_item1"
+        android:icon="@drawable/ic_like"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:title="分享"
+        android:id="@+id/menu_action_item2"
+        android:icon="@drawable/ic_share"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+
+    <item
+        android:title="设置"
+        android:id="@+id/menu_action_item3"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_set"
+        app:showAsAction="never" />
+
+</menu>

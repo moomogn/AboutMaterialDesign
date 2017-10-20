@@ -19,7 +19,10 @@
         <activity android:name=".drawerlayout.DrawerLayoutActivity" />
         <activity android:name=".textinput.TextInputActivity" />
         <activity android:name=".floating.FloatingActionButtonActivity" />
-        <activity android:name=".snackbar.SnackbarActivity"></activity>
+        <activity android:name=".snackbar.SnackbarActivity" />
+        <activity android:name=".coordinator.CoordinatorActivity" />
+        <activity android:name=".toolbar.ToolbarActivity" />
+        <activity android:name=".toolbar.ToolbarTestActivity1"></activity>
     </application>
 
 </manifest>

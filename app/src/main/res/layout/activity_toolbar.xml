@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.arno.aboutmaterialdesign.toolbar.ToolbarActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:id="@+id/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_list"
+        app:title="Title"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/CustomPopupTheme"
+        app:logo="@drawable/ic_down"
+        app:subtitle="subTitle"
+        app:subtitleTextColor="@android:color/white"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/shape_btn"
+            android:paddingLeft="@dimen/dimen_common_margin"
+            android:paddingRight="@dimen/dimen_common_margin"
+            android:paddingBottom="@dimen/dimen_common_margin"
+            >
+
+            <Button
+                android:id="@+id/activity_toolbar_btn1"
+                style="@style/commmon_button_style"
+                android:text="测试1"/>
+
+            <Button
+                android:id="@+id/activity_toolbar_btn2"
+                style="@style/commmon_button_style"
+                android:text="测试2"/>
+
+            <Button
+                android:id="@+id/activity_toolbar_btn"
+                style="@style/commmon_button_style"
+                android:text="测试"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

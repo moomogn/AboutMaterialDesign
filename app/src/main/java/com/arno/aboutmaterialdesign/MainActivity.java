@@ -10,6 +10,7 @@ import com.arno.aboutmaterialdesign.floating.FloatingActionButtonActivity;
 import com.arno.aboutmaterialdesign.snackbar.SnackbarActivity;
 import com.arno.aboutmaterialdesign.tablayout.TabLayoutActivity;
 import com.arno.aboutmaterialdesign.textinput.TextInputActivity;
+import com.arno.aboutmaterialdesign.toolbar.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Arno";
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 SnackbarActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_Toolbar:
+                ToolbarActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_CoordinatorLayout:
                 break;
