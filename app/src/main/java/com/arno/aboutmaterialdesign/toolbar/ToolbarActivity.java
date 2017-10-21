@@ -34,16 +34,14 @@ public class ToolbarActivity extends AppCompatActivity {
 
         mToolbar = ((Toolbar) findViewById(R.id.activity_toolbar));
 
+        setSupportActionBar(mToolbar);
+
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 makeText(ToolbarActivity.this, "NavigationIcon Click", Toast.LENGTH_SHORT).show();
             }
         });
-
-        setSupportActionBar(mToolbar);
-
-        mToolbar.setOverflowIcon(getResources().getDrawable(R.drawable.ic_more));//更改右上角图标
 
         /**
          * 自定义 toolbar 布局，具体需要看看 Toolbar.LayoutParams 的源码，查看它的布局方法

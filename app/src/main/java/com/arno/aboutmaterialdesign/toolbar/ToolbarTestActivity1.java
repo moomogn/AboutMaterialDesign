@@ -70,18 +70,18 @@ public class ToolbarTestActivity1 extends AppCompatActivity {
         });
 
         mToolbar = ((Toolbar) findViewById(R.id.activity_test1_toolbar));
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ToolbarTestActivity1.this.finish();
-            }
-        });
 
         setSupportActionBar(mToolbar);
 //        getSupportActionBar().setDisplayShowTitleEnabled(false);//不显示title
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(false);//不显示NavigationIcon
 //        getSupportActionBar().setDisplayShowHomeEnabled(false);//不显示logo
 
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToolbarTestActivity1.this.finish();
+            }
+        });
         mImageView = ((ImageView) findViewById(R.id.activity_test1_toolbar_img));
 
 //        setupMenuFun2();

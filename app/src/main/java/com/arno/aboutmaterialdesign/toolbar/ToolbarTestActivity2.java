@@ -27,15 +27,16 @@ public class ToolbarTestActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_toolbar_test2);
 
         mToolbar = ((Toolbar) findViewById(R.id.activity_test2_toolbar));
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);//不显示title
+
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ToolbarTestActivity2.this.finish();
             }
         });
-
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);//不显示title
     }
 
     @Override
@@ -43,5 +44,9 @@ public class ToolbarTestActivity2 extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_action3, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
+    private Intent getDefaultIntent() {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("image/*");
+        return intent;
+    }
 }
