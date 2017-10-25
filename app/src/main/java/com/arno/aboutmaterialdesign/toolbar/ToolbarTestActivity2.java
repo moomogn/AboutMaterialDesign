@@ -37,6 +37,7 @@ public class ToolbarTestActivity2 extends AppCompatActivity {
                 ToolbarTestActivity2.this.finish();
             }
         });
+
     }
 
     @Override

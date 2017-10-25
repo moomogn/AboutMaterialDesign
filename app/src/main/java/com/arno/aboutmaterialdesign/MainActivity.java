@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.arno.aboutmaterialdesign.coordinator.CoordinatorActivity;
 import com.arno.aboutmaterialdesign.drawerlayout.DrawerLayoutActivity;
 import com.arno.aboutmaterialdesign.floating.FloatingActionButtonActivity;
 import com.arno.aboutmaterialdesign.snackbar.SnackbarActivity;
@@ -13,7 +14,7 @@ import com.arno.aboutmaterialdesign.textinput.TextInputActivity;
 import com.arno.aboutmaterialdesign.toolbar.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "Arno";
+    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 ToolbarActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_CoordinatorLayout:
+                CoordinatorActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_CollapsingToolbarLayout:
                 break;

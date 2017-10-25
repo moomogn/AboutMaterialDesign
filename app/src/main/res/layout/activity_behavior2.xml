@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arno.aboutmaterialdesign.coordinator.behavior.BehaviorActivity2">
+
+    <TextView
+        android:id="@+id/activity_behavior2_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/dimen_common_margin"
+        android:background="@color/colorAccent2"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="this is a swipe view"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

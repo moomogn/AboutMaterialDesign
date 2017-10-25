@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     tools:context="com.arno.aboutmaterialdesign.coordinator.CoordinatorActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +32,27 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_btn"
             android:textAllCaps="false"
-            android:text="behavior"
+            android:text="Bottom Behavior"
+            />
+
+        <Button
+            android:id="@+id/activity_coordinator_btn3"
+            android:layout_marginTop="@dimen/dimen_common_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn"
+            android:textAllCaps="false"
+            android:text="SwipeDismiss Behavior"
+            />
+
+        <Button
+            android:id="@+id/activity_coordinator_btn4"
+            android:layout_marginTop="@dimen/dimen_common_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn"
+            android:textAllCaps="false"
+            android:text="Custome Behavior"
             />
 
     </LinearLayout>
