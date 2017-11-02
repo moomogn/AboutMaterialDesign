@@ -27,7 +27,9 @@
         <activity android:name=".coordinator.SnackFABActivity" />
         <activity android:name=".coordinator.behavior.BehaviorActivity" />
         <activity android:name=".coordinator.behavior.CustomeBehaviorActivity" />
-        <activity android:name=".coordinator.behavior.BehaviorActivity2"></activity>
+        <activity android:name=".coordinator.behavior.BehaviorActivity2" />
+        <activity android:name=".appbarlayout.AppBarLayoutActivity" />
+        <activity android:name=".appbarlayout.AppBarLayoutTestActivity"></activity>
     </application>
 
 </manifest>

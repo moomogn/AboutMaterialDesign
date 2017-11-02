@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arno.aboutmaterialdesign.appbarlayout.AppBarLayoutActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--1.简单滚动 scroll-->
+        <!--2.快速下拉滚动 scroll|enterAlways-->
+        <!--3.有限度的下拉滚动 scroll|enterAlways|enterAlwaysCollapsed-->
+        <!--4.有限度的上拉滚动 scroll|exitUntilCollapsed-->
+        <!--5.有弹性的滚动 scroll|snap-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/include_appbarlayout_toolbarId"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_scrollFlags="scroll|snap"
+            app:title="Toolbar title"
+            app:titleTextColor="#ffffff"
+            ></android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_textview_content"
+            android:textSize="20sp"
+            />
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
