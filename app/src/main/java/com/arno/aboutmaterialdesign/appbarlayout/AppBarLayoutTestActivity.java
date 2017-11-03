@@ -37,43 +37,43 @@ public class AppBarLayoutTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_bar_layout_test);
 
-//        scrollInfoHolder = new ScrollInfoHolder(this);
-//
-//        mNestedScrollView = ((NestedScrollView) findViewById(R.id.activity_app_bar_layout_nestedscrollview));
-//
-//        mHeadBgContainer = findViewById(R.id.activity_app_bar_layout_bg_container);
-//        mIv_icon = ((ImageView) findViewById(R.id.activity_app_bar_layout_icon));
-//        mIv_iconExtra = ((ImageView) findViewById(R.id.activity_app_bar_layout_icon_extra));
-//        mTxt_nickName = ((TextView) findViewById(R.id.activity_app_bar_layout_nickname_tv));
-//
-//        mAppBarLayout = ((AppBarLayout) findViewById(R.id.activity_app_bar_layout));
-//        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-//            @Override
-//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-//                if (scrollInfoHolder.scrollDown_level2()) {// -200 --> -100
-//                    iconAnim_moveX(verticalOffset);
-//                }
-//
-//                if (scrollInfoHolder.scrollUp_level1()) {// -100 --> -200
-//                    iconAnim_moveX(verticalOffset);
-//                    ValueAnimator animation = ValueAnimator.ofFloat(1f, 0f);
-//                    if (ICON_EXTRA_SHOW_FLAG) {// 大图标是否已经显示
-//                        ICON_EXTRA_SHOW_FLAG = !ICON_EXTRA_SHOW_FLAG;
-//                        iconAnim_alphaStart(animation);
-//                    }
-//                }
-//
-//                if (scrollInfoHolder.scrollDown_level1()) {// -100 --> 0
-//                    ValueAnimator animation = ValueAnimator.ofFloat(0f, 1f);
-//                    if (!ICON_EXTRA_SHOW_FLAG) {// 大图标是否已经显示
-//                        ICON_EXTRA_SHOW_FLAG = !ICON_EXTRA_SHOW_FLAG;
-//                        iconAnim_alphaStart(animation);
-//                    }
-//                }
-//
-//                scrollInfoHolder.onOffsetChanged(verticalOffset);
-//            }
-//        });
+        scrollInfoHolder = new ScrollInfoHolder(this);
+
+        mNestedScrollView = ((NestedScrollView) findViewById(R.id.activity_app_bar_layout_nestedscrollview));
+
+        mHeadBgContainer = findViewById(R.id.activity_app_bar_layout_bg_container);
+        mIv_icon = ((ImageView) findViewById(R.id.activity_app_bar_layout_icon));
+        mIv_iconExtra = ((ImageView) findViewById(R.id.activity_app_bar_layout_icon_extra));
+        mTxt_nickName = ((TextView) findViewById(R.id.activity_app_bar_layout_nickname_tv));
+
+        mAppBarLayout = ((AppBarLayout) findViewById(R.id.activity_app_bar_layout));
+        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (scrollInfoHolder.scrollDown_level2()) {// -200 --> -100
+                    iconAnim_moveX(verticalOffset);
+                }
+
+                if (scrollInfoHolder.scrollUp_level1()) {// -100 --> -200
+                    iconAnim_moveX(verticalOffset);
+                    ValueAnimator animation = ValueAnimator.ofFloat(1f, 0f);
+                    if (ICON_EXTRA_SHOW_FLAG) {// 大图标是否已经显示
+                        ICON_EXTRA_SHOW_FLAG = !ICON_EXTRA_SHOW_FLAG;
+                        iconAnim_alphaStart(animation);
+                    }
+                }
+
+                if (scrollInfoHolder.scrollDown_level1()) {// -100 --> 0
+                    ValueAnimator animation = ValueAnimator.ofFloat(0f, 1f);
+                    if (!ICON_EXTRA_SHOW_FLAG) {// 大图标是否已经显示
+                        ICON_EXTRA_SHOW_FLAG = !ICON_EXTRA_SHOW_FLAG;
+                        iconAnim_alphaStart(animation);
+                    }
+                }
+
+                scrollInfoHolder.onOffsetChanged(verticalOffset);
+            }
+        });
 
     }
 
