@@ -29,7 +29,10 @@
         <activity android:name=".coordinator.behavior.CustomeBehaviorActivity" />
         <activity android:name=".coordinator.behavior.BehaviorActivity2" />
         <activity android:name=".appbarlayout.AppBarLayoutActivity" />
-        <activity android:name=".appbarlayout.AppBarLayoutTestActivity"></activity>
+        <activity android:name=".appbarlayout.AppBarLayoutTestActivity" />
+        <activity android:name=".collapsing.CollapsingToolActivity"></activity>
+        <activity android:name=".collapsing.CheeseDetailActivity"></activity>
+        <activity android:name=".collapsing.CheesesActivity" />
     </application>
 
 </manifest>

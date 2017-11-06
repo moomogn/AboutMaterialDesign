@@ -13,7 +13,7 @@
         android:id="@+id/menu_action_item1"
         android:icon="@drawable/ic_like"
         android:orderInCategory="1"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 
     <item
         android:title="分享"

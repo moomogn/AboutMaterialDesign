@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.arno.aboutmaterialdesign.appbarlayout.AppBarLayoutTestActivity;
+import com.arno.aboutmaterialdesign.collapsing.CheesesActivity;
 import com.arno.aboutmaterialdesign.coordinator.CoordinatorActivity;
 import com.arno.aboutmaterialdesign.drawerlayout.DrawerLayoutActivity;
 import com.arno.aboutmaterialdesign.floating.FloatingActionButtonActivity;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 AppBarLayoutTestActivity.launch(MainActivity.this);
                 break;
             case R.id.activity_main_btn_CollapsingToolbarLayout:
+                CheesesActivity.launch(MainActivity.this);
                 break;
         }
     }
